@@ -14,10 +14,11 @@ tired_ = "76561198164281879"
 genesis = "76561198350433664"
 Kim = "76561198191283141"
 ValleyofFeed = "76561198069573710"
+Apo = "76561198208715317"
 
 key = "318D204969260A9465D28DDD06A29D40"
 
-ids = [EleGanTor, ZeBi, Destiny, Schnipsgie]
+ids = [EleGanTor, Destiny]
 
 allGames = {}
 gameNames = requests.get("https://api.steampowered.com/ISteamApps/GetAppList/v2/").json()["applist"]["apps"]
@@ -41,5 +42,8 @@ for i in range(len(ids)):
 
 for i, j in allGames.items():
     if j == len(ids):
-        print(giveName[i])
+        try:
+            print(giveName[i])
+        except:
+            pass
 
